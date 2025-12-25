@@ -212,7 +212,7 @@ nodes:
     display_labels:
       - name__value
     icon: "game-icons:fire-zone"
-    description: "Trafficflow"
+    description: "trafficflow"
     label: "Trafficflow"
     namespace: Security
     human_friendly_id:
@@ -231,7 +231,7 @@ nodes:
         kind: Text
         optional: true
     relationships:
-      - name: Flows
+      - name: flows2
         peer: GenericAppID
         cardinality: one
         kind: Attribute
@@ -736,5 +736,6 @@ extensions:
           peer: SecurityPolicy
           cardinality: one
           kind: Attribute
+
 
 
