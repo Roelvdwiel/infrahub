@@ -340,7 +340,7 @@ nodes:
         kind: Text
         optional: false
         # https://stackoverflow.com/questions/11809631/fully-qualified-domain-name-validation
-        regex: "(?=^.{1,253}$)(^(((?!-)[a-zA-Z0-9-]{1,63}(?<!-))|((?!-)[a-zA-Z0-9-]{1,63}(?<!-)\\.)+[a-zA-Z]{2,63})$)"
+        # regex: "(?=^.{1,253}$)(^(((?!-)[a-zA-Z0-9-]{1,63}(?<!-))|((?!-)[a-zA-Z0-9-]{1,63}(?<!-)\\.)+[a-zA-Z]{2,63})$)"
   - name: AddressGroup
     namespace: Security
     menu_placement: SecurityPolicy
@@ -736,3 +736,4 @@ extensions:
           peer: SecurityPolicy
           cardinality: one
           kind: Attribute
+
