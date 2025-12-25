@@ -30,7 +30,7 @@ generics:
         kind: Text
         optional: true
     relationships:
-      - name: Flows
+      - name: flows
         peer: Trafficflow
         cardinality: many
         kind: Component
@@ -251,25 +251,25 @@ nodes:
         optional: false
         kind: Attribute
         cardinality: many
-        identifier: Trafficflow__destination_address
+        identifier: trafficflow__destination_address
       - name: source_address
         peer: SecurityGenericAddress
         optional: false
         kind: Attribute
         cardinality: many
-        identifier: Trafficflow__source_address
+        identifier: trafficflow__source_address
       - name: destination_services
         peer: SecurityGenericService
         optional: false
         kind: Attribute
         cardinality: many
-        identifier: Trafficflow__destination_service
+        identifier: trafficflow__destination_service
       - name: source_services
         peer: SecurityGenericService
         optional: true
         kind: Attribute
         cardinality: many
-        identifier: Trafficflow__source_service
+        identifier: trafficflow__source_service
   - name: Prefix
     namespace: Security
     menu_placement: SecurityPolicy
@@ -340,7 +340,7 @@ nodes:
         kind: Text
         optional: false
         # https://stackoverflow.com/questions/11809631/fully-qualified-domain-name-validation
-        # regex: "(?=^.{1,253}$)(^(((?!-)[a-zA-Z0-9-]{1,63}(?<!-))|((?!-)[a-zA-Z0-9-]{1,63}(?<!-)\\.)+[a-zA-Z]{2,63})$)"
+        regex: "(?=^.{1,253}$)(^(((?!-)[a-zA-Z0-9-]{1,63}(?<!-))|((?!-)[a-zA-Z0-9-]{1,63}(?<!-)\\.)+[a-zA-Z]{2,63})$)"
   - name: AddressGroup
     namespace: Security
     menu_placement: SecurityPolicy
@@ -736,4 +736,5 @@ extensions:
           peer: SecurityPolicy
           cardinality: one
           kind: Attribute
+
 
