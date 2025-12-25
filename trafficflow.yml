@@ -1,0 +1,128 @@
+  - name: Policy
+    namespace: Security
+    label: "Security Policy"
+    human_friendly_id:
+      - name__value
+    display_labels:
+      - name__value
+    order_by:
+      - name__value
+    attributes:
+      - name: name
+        label: Name
+        kind: Text
+        optional: false
+      - name: description
+        label: Description
+        kind: Text
+        optional: true
+    relationships:
+      - name: rules
+        peer: SecurityPolicyRule
+        cardinality: many
+        kind: Component
+      - name: location_target
+        peer: LocationGeneric
+        cardinality: one
+        optional: true
+        kind: Attribute
+      - name: device_target
+        peer: SecurityFirewall
+        cardinality: one
+        optional: true
+        kind: Attribute
+	
+
+generics:
+  - name: GenericAppID
+    namespace: Security
+    include_in_menu: false
+    display_labels:
+      - name__value
+    hierarchical: true
+    attributes:
+      - name: name
+        kind: Text
+        label: Name
+        optional: false
+        unique: true
+      - name: description
+        label: Description
+        kind: Text
+        optional: true
+    relationships:
+      - name: Flows
+        peer: Trafficflow
+        cardinality: many
+        kind: Component
+        optional: true
+		
+  - name: Trafficflow
+    namespace: Security
+    label: "Traffic_Flow"
+    human_friendly_id:
+      - name__value
+    display_labels:
+      - name__value
+    order_by:
+      - name__value
+    attributes:
+      - name: name
+        label: Name
+        kind: Text
+        optional: false
+      - name: description
+        label: Description
+        kind: Text
+        optional: true
+    relationships:
+      - name: Flows
+        peer: GenericAppID
+        cardinality: one
+        kind: Attribute
+        optional: false
+      - name: rules
+        peer: SecurityPolicyRule
+        cardinality: many
+        kind: Component
+        optional: true
+      - name: location_target
+        peer: LocationGeneric
+        cardinality: one
+        optional: true
+        kind: Attribute
+      - name: device_target
+        peer: SecurityFirewall
+        cardinality: one
+        optional: true
+        kind: Attribute
+      - name: policy
+        peer: SecurityPolicy
+        kind: Attribute
+        cardinality: one
+        optional: true
+      - name: destination_address
+        peer: SecurityGenericAddress
+        optional: true
+        kind: Attribute
+        cardinality: many
+        identifier: Trafficflow__destination_address
+      - name: source_address
+        peer: SecurityGenericAddress
+        optional: true
+        kind: Attribute
+        cardinality: many
+        identifier: Trafficflow__source_address
+      - name: destination_services
+        peer: SecurityGenericService
+        optional: true
+        kind: Attribute
+        cardinality: many
+        identifier: Trafficflow__destination_service
+      - name: source_services
+        peer: SecurityGenericService
+        optional: true
+        kind: Attribute
+        cardinality: many
+        identifier: Trafficflow__source_service
+        optional: true
