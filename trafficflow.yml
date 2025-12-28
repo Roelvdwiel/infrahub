@@ -232,7 +232,7 @@ nodes:
         optional: true
     relationships:
       - name: flows2
-        peer: GenericAppID
+        peer: SecurityGenericAppID
         cardinality: one
         kind: Attribute
         optional: false
@@ -735,6 +735,7 @@ extensions:
           peer: SecurityPolicy
           cardinality: one
           kind: Attribute
+
 
 
 
