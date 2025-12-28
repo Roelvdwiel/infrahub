@@ -15,7 +15,7 @@ generics:
         optional: true
   - name: GenericAppID
     namespace: Security
-    include_in_menu: false
+    include_in_menu: True
     display_labels:
       - name__value
     hierarchical: true
@@ -739,6 +739,7 @@ extensions:
           peer: SecurityPolicy
           cardinality: one
           kind: Attribute
+
 
 
 
