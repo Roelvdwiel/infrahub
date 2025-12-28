@@ -31,7 +31,7 @@ generics:
         optional: true
     relationships:
       - name: flows
-        peer: Trafficflow
+        peer: SecurityTrafficflow
         cardinality: many
         kind: Component
         optional: true
@@ -735,6 +735,7 @@ extensions:
           peer: SecurityPolicy
           cardinality: one
           kind: Attribute
+
 
 
 
