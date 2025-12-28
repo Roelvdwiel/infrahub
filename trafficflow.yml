@@ -230,6 +230,8 @@ nodes:
         label: Description
         kind: Text
         optional: true
+    inherit_from:
+      - SecurityGenericAppID
     relationships:
       - name: flows2
         peer: SecurityGenericAppID
@@ -739,6 +741,7 @@ extensions:
           peer: SecurityPolicy
           cardinality: one
           kind: Attribute
+
 
 
 
