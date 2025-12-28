@@ -15,7 +15,7 @@ generics:
         optional: true
   - name: GenericAppID
     namespace: Security
-    include_in_menu: True
+    include_in_menu: false
     display_labels:
       - name__value
     hierarchical: true
@@ -230,8 +230,6 @@ nodes:
         label: Description
         kind: Text
         optional: true
-    inherit_from:
-      - SecurityGenericAppID
     relationships:
       - name: flows2
         peer: SecurityGenericAppID
@@ -357,6 +355,21 @@ nodes:
       - name__value
     inherit_from:
       - SecurityGenericAddressGroup
+
+  - name: AppID
+    namespace: Security
+    menu_placement: SecurityPolicy
+    include_in_menu: true
+    description: "AppID"
+    label: App ID
+    parent: SecurityAppID
+    human_friendly_id:
+      - name__value
+    display_labels:
+      - name__value
+    inherit_from:
+      - SecurityGenericAppID
+
 
   - name: IPProtocol
     namespace: Security
