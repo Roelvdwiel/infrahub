@@ -360,9 +360,9 @@ nodes:
     namespace: Security
     menu_placement: SecurityPolicy
     include_in_menu: true
-    description: "AppID"
+    icon: "material-symbols:menu-book-outline-rounded"
+    description:  "Application ID"
     label: App ID
-    parent: SecurityAppID
     human_friendly_id:
       - name__value
     display_labels:
