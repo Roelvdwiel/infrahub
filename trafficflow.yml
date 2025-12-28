@@ -592,6 +592,10 @@ nodes:
       - name__value
     menu_placement: "SecurityPolicy"
     attributes:
+      - name: name
+        label: Name
+        kind: Text
+        optional: false
       - name: role
         kind: Dropdown
         optional: true
@@ -735,6 +739,7 @@ extensions:
           peer: SecurityPolicy
           cardinality: one
           kind: Attribute
+
 
 
 
