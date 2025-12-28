@@ -590,7 +590,7 @@ nodes:
     include_in_menu: true
     human_friendly_id:
       - name__value
-    menu_placement: "InfraGenericDevice"
+    menu_placement: "SecurityPolicy"
     attributes:
       - name: role
         kind: Dropdown
@@ -708,7 +708,7 @@ nodes:
   - name: FirewallInterface
     namespace: Security
     label: Firewall Interface
-    menu_placement: "InfraGenericDevice"
+    menu_placement: "SecurityPolicy"
     include_in_menu: false
     icon: "mdi:ethernet"
     display_labels:
@@ -735,6 +735,7 @@ extensions:
           peer: SecurityPolicy
           cardinality: one
           kind: Attribute
+
 
 
 
