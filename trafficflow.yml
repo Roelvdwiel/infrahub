@@ -584,7 +584,6 @@ nodes:
   - name: Firewall
     namespace: Security
     inherit_from:
-      - InfraGenericDevice
       - CoreArtifactTarget
       - SecurityPolicyAssignment
     icon: "mdi:firewall"
@@ -736,3 +735,4 @@ extensions:
           peer: SecurityPolicy
           cardinality: one
           kind: Attribute
+
