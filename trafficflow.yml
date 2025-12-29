@@ -350,7 +350,6 @@ nodes:
     label: Address Group
     human_friendly_id:
       - name__value
-    parent: SecurityAddressGroup
     display_labels:
       - name__value
     inherit_from:
