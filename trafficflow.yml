@@ -20,7 +20,7 @@ generics:
       - name__value
     hierarchical: true
     attributes:
-      - name: app_id
+      - name: name
         kind: Text
         label: Name
         optional: false
@@ -367,6 +367,11 @@ nodes:
       - name__value
     inherit_from:
       - SecurityGenericAppID
+    attributes:
+      - name: app_id
+        label: App ID
+        kind: Text
+        optional: false
 
 
   - name: IPProtocol
