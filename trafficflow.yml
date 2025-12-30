@@ -18,7 +18,6 @@ generics:
     include_in_menu: false
     display_labels:
       - name__value
-    hierarchical: false
     attributes:
       - name: name
         kind: Text
