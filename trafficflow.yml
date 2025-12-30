@@ -232,7 +232,7 @@ nodes:
       - name: flows2
         peer: SecurityGenericAppID
         cardinality: one
-        kind: Component
+        kind: Attribute
         optional: false
         identifier: trafficflow__appid
       - name: rules
