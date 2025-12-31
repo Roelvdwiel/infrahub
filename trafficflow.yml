@@ -232,7 +232,6 @@ nodes:
       - name: appid
         peer: SecurityGenericAppID
         cardinality: one
-        kind: Attribute
         optional: false
       - name: rules
         peer: SecurityPolicyRule
