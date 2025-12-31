@@ -366,12 +366,6 @@ nodes:
       - name__value
     inherit_from:
       - SecurityGenericAppID
-    attributes:
-      - name: app_id
-        label: APPID
-        kind: Text
-        optional: false
-
 
   - name: IPProtocol
     namespace: Security
