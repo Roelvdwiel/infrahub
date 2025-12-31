@@ -229,7 +229,7 @@ nodes:
         kind: Text
         optional: true
     relationships:
-      - name: flows2
+      - name: appid
         peer: SecurityGenericAppID
         cardinality: one
         kind: Attribute
