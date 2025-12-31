@@ -234,7 +234,6 @@ nodes:
         cardinality: one
         kind: Attribute
         optional: false
-        identifier: trafficflow__appid
       - name: rules
         peer: SecurityPolicyRule
         cardinality: many
